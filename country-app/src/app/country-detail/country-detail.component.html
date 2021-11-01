@@ -1,0 +1,15 @@
+<!-- <p>{{message|json}} asdawd</p>-->
+<div [ngSwitch]="status">
+    <h2>{{message.country}}</h2>
+    <p><span style="color: green;">Capital : </span>{{message.capital}}</p>
+    <p><span style="color: green;">Area : </span>{{message.area}} km<sup>2</sup></p>
+    <p><span style="color: green;">Population : </span>{{message.population}}</p>
+    <p><span style="color: green;">GDP : </span>{{message.gdp}} USD</p>
+    <p><span style="color: green;">Currency : </span>{{message.currency}}</p>
+    <button class="btn btn-danger" *ngIf="status"  (click)= "onSelect('homepage')">Back</button>
+    <button class="btn btn-danger" *ngIf="!status" (click)= "onSelect('countries')">Back</button>
+    <!-- <p>{{status}}</p> -->
+</div>
+
+
+

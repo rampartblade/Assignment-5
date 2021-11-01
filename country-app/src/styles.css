@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.rangeRight{
+    margin-right: 10px;
+}
+.rangeLeft{
+    margin-left: 10px;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+  }
+

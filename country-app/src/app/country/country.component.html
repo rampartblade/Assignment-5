@@ -1,0 +1,16 @@
+<h2 *ngIf="status">List of all countries in our database</h2>
+<!-- <div *ngFor= "let state of countries">
+<div>{{state.country}} </div>
+<div>Capital ({{state.capital}})</div>
+</div> -->
+<div class="row" *ngIf="status">
+    <div class="col-sm-4" *ngFor= "let state of countries let i = index ">
+        <div class="card-mb-3" >
+            <div class="card-body" style="cursor: pointer; margin-bottom: 30px; background-color: greenyellow;" (click)="countryDetails(i)" (click)= "onSelect('details')">
+                <h5 class="card-title" style="text-align: center;">{{state.country}}</h5>
+                <h6 class="card-text" style="text-align: center;">Capital</h6>
+                <p class="card-text" style="text-align: center;">({{state.capital}})</p>
+            </div>
+        </div>
+    </div>
+</div>

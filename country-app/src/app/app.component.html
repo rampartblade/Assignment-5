@@ -1,0 +1,9 @@
+<div class="container justify-content-center p-5 center"  [ngSwitch]="loadedFeature">
+    <app-header (selectedFeatureEvent)=switchView($event)></app-header>
+    <app-home *ngSwitchCase="'homepage'"  (data)=countryDetails($event) (data2)=countryDetails($event) (selectedCountryDetails)= switchView($event)></app-home>
+    <app-country  *ngSwitchCase="'countries'" (data)=countryDetails($event) (selectedCountryDetails)= switchView($event) [status]="flag"></app-country>
+    <app-country-detail *ngSwitchCase="'details'" [message]="countryInfo" [status]="status" (selectedCountryEvent)=switchView($event)></app-country-detail>
+</div>
+<!--status => kondisi flag back dari appcountrydetail, flag => kondisi flag dari country div-->
+<!--[sortArea]="temp" [sortPopulation]="temp2"-->
+<!--(allDataEvent)=datas($event) (allDataEvent2)=datas2($event)-->

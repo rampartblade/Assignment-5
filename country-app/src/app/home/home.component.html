@@ -1,0 +1,26 @@
+<app-country (sortAreaEvent) = sortArea($event) (sortPopulationEvent)= sortPopulation($event)></app-country>
+
+<h2>Three Most Populated Countries</h2>
+<div class="row" >
+    <div class="col-sm-4" *ngFor= "let states of countryPopulation let i = index"> <!--sortPopulation-->
+        <div class="card-mb-3" >
+            <div class="card-body" style="cursor: pointer; margin-bottom: 30px; background-color: burlywood;" (click)="countryDetails(i)" (click)= "onSelect('details')">
+                <h5 class="card-title" style="text-align: center;">{{states.country}}</h5>
+                <p class="card-text" style="text-align: center;">{{states.population}} People</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>Three Largest Countries</h2>
+<!-- <p>{{sort|json}}</p> -->
+<div class="row" >
+    <div class="col-sm-4" *ngFor= "let state of countryArea let i = index"> <!--sortArea-->
+        <div class="card-mb-3" >
+            <div class="card-body" style="cursor: pointer; margin-bottom: 30px; background-color: burlywood;" (click)="countryDetails2(i)" (click)= "onSelect('details')">
+                <h5 class="card-title" style="text-align: center;">{{state.country}}</h5>
+                <p class="card-text" style="text-align: center;">{{state.area}} km<sup>2</sup></p>
+            </div>
+        </div>
+    </div>
+</div>
